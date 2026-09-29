@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Nu Metro — Website Redesign Pitch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f4e7d6;--ink:#2b1216;--ink-soft:#5f3d42;--orange:#f26b21;--gold:#b98526;
+  --line:rgba(43,18,22,.12);--card:rgba(255,255,255,.5);--card-line:rgba(255,255,255,.7);
+  --display:"Bodoni Moda","Bodoni MT",Georgia,serif;--ui:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#150609;--ink:#fbeee0;--ink-soft:#d9beb0;--line:rgba(255,255,255,.14);--card:rgba(255,255,255,.06);--card-line:rgba(255,255,255,.14);
+}}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ui);line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{width:min(820px,calc(100% - 40px));margin-inline:auto;padding:56px 0 100px}
+h1,h2,h3,p,ul,dl,dd,dt{margin:0}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(34px,6vw,52px);letter-spacing:-.02em;line-height:1.05}
+h2{font-family:var(--display);font-weight:600;font-size:clamp(22px,3vw,28px);letter-spacing:-.01em;margin-bottom:14px}
+p{color:var(--ink-soft);font-size:16px}
+ul{padding-left:20px;color:var(--ink-soft);font-size:16px;display:grid;gap:6px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}
+.mark{width:26px;height:26px;border-radius:50%;background:var(--orange);display:inline-grid;place-items:center;font-family:var(--display);font-weight:700;color:#2b1216;font-size:14px}
+header{display:flex;align-items:center;gap:10px;margin-bottom:30px}
+.brand{font-family:var(--display);font-weight:700;font-size:19px}
+.hero{margin-top:26px}
+.hero p{margin-top:16px;max-width:60ch;font-size:17px}
+.sec{margin-top:52px}
+.card{background:var(--card);border:1px solid var(--card-line);border-radius:24px;padding:26px 28px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.feat{display:grid;gap:16px;margin-top:6px}
+.feat .card h3{font-family:var(--ui);font-weight:700;font-size:16px;margin-bottom:4px}
+.feat .card p{font-size:14.5px;margin:0}
+table{width:100%;border-collapse:collapse;margin-top:6px}
+th,td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line);font-size:15px;vertical-align:top}
+th{color:var(--ink-soft);font-weight:700;font-size:12px;letter-spacing:.05em;text-transform:uppercase}
+td:first-child{font-weight:700;white-space:nowrap}
+.note{margin-top:14px;padding:16px 18px;border-radius:16px;background:var(--card);border:1px solid var(--card-line);font-size:14.5px}
+.steps{display:grid;gap:10px;margin-top:6px}
+.step{display:flex;gap:14px;align-items:flex-start}
+.step .n{flex:none;width:26px;height:26px;border-radius:50%;background:var(--card);border:1px solid var(--card-line);display:grid;place-items:center;font-weight:700;font-size:13px}
+.step p{font-size:15px;margin:0}
+footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:13px}
+@media (max-width:640px){.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="data:image/png;base64,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" alt="" style="height:30px;width:auto"><span class="brand">Nu Metro</span>
+  </header>
+
+  <div class="hero">
+    <span class="eyebrow">Website redesign — concept pitch</span>
+    <h1>A cinema site that leads with what's showing tonight</h1>
+    <p>A rounded, glass-and-classic visual direction built around one goal: get someone from landing on the homepage to a booked seat in three taps. This document summarises the design direction and the technology recommended to build it for production.</p>
+  </div>
+
+  <section class="sec">
+    <h2>Design direction</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3 style="font-family:var(--ui);font-weight:700;font-size:16px;margin-bottom:6px">Liquid glass, rounded, classic</h3>
+        <p style="font-size:14.5px;margin:0">Frosted, layered glass panels with soft inner highlights sit over a warm gradient backdrop. Pill-shaped buttons and 24–40px corner radii replace the old site's sharp edges throughout.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-family:var(--ui);font-weight:700;font-size:16px;margin-bottom:6px">Bodoni + Hanken Grotesk</h3>
+        <p style="font-size:14.5px;margin:0">A classic didone serif for film titles and headings gives it a marquee, old-cinema feel; a clean grotesque carries every button, chip and label so the UI stays crisp.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Key features in the concept</h2>
+    <div class="feat">
+      <div class="card"><h3>Hero carousel</h3><p>Arrow- and dot-driven carousel of current films, each with its own showtimes panel — replaces the old empty hero.</p></div>
+      <div class="card"><h3>Choose an experience</h3><p>Standard, VIP, Xtreme, 4DX and ScreenX as a collapsible set of cards; tapping one filters the film grid instantly.</p></div>
+      <div class="card"><h3>Search</h3><p>Quick "find a movie" sheet that filters by title or genre as you type.</p></div>
+      <div class="card"><h3>Seat booking flow</h3><p>Tap a showtime → seat map → ticket-stub summary, all in one sheet, three taps deep from the homepage.</p></div>
+      <div class="card"><h3>Mobile-first grid</h3><p>Two films per row on phones instead of one, with theme-aware light/dark styling throughout.</p></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Recommended build stack</h2>
+    <p style="margin-bottom:4px">This concept is a single self-contained HTML/CSS/JS file, built for fast iteration in conversation. For a production build, this is the recommended stack:</p>
+    <table>
+      <tr><th>Layer</th><th>Choice</th><th>Why</th></tr>
+      <tr><td>Frontend</td><td>Next.js (React) + TypeScript</td><td>Server-rendered pages for fast first paint on the film grid; typed code reduces bugs once real payments are involved.</td></tr>
+      <tr><td>Styling</td><td>Tailwind CSS</td><td>Maps directly onto this design's existing spacing, radius and color tokens — a port, not a rewrite.</td></tr>
+      <tr><td>Booking &amp; payments</td><td>Existing Nu Metro booking API where possible; Stripe or PayFast if a new service is needed</td><td>Seat inventory and payments are the highest-risk part of the system — reuse what's already trusted rather than rebuilding it.</td></tr>
+      <tr><td>Hosting</td><td>Vercel or similar</td><td>Matches Next.js's deployment model with minimal ops overhead.</td></tr>
+    </table>
+    <div class="note">This front end is designed to be a new skin over Nu Metro's existing ticketing and payments systems, not a replacement for them.</div>
+  </section>
+
+  <section class="sec">
+    <h2>Suggested next steps</h2>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><p>Confirm which booking/session API the new front end should call, and get sandbox access.</p></div>
+      <div class="step"><span class="n">2</span><p>Port the design tokens (colors, type, radii, glass effect) into a Tailwind config and Next.js component library.</p></div>
+      <div class="step"><span class="n">3</span><p>Build the homepage, film grid, and booking flow as real pages wired to live data.</p></div>
+      <div class="step"><span class="n">4</span><p>Usability-test the three-tap booking flow against the current site's conversion rate.</p></div>
+    </div>
+  </section>
+
+  <footer>Prepared as a design concept and technical proposal. Not affiliated with or endorsed by Nu Metro.</footer>
+</div>
+</body>
+</html>
