@@ -6,6 +6,9 @@ out/
 # Local environment files
 .env*
 !.env.example
+*.pem
+*.key
+credentials*.json
 
 # Local planning brief
 BUILD_BRIEF.md

@@ -1,7 +1,23 @@
 {
   "name": "nu-metro-redesign-concept",
   "private": true,
-  "scripts": { "dev": "next dev", "build": "next build", "lint": "next lint" },
-  "dependencies": { "next": "14.2.31", "react": "18.3.1", "react-dom": "18.3.1" },
-  "devDependencies": { "@types/node": "20.17.30", "@types/react": "18.3.20", "@types/react-dom": "18.3.7", "autoprefixer": "10.4.21", "postcss": "8.5.3", "tailwindcss": "3.4.17", "typescript": "5.8.2" }
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^16.3.7",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.17.30",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.28",
+    "tailwindcss": "3.4.17",
+    "typescript": "5.8.2"
+  }
 }
